@@ -1,0 +1,4 @@
+C:\Users\claud\Desktop\csharp-practice\obj\Debug\net8.0\csharp-practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\claud\Desktop\csharp-practice\obj\Debug\net8.0\csharp-practice.AssemblyInfoInputs.cache
+C:\Users\claud\Desktop\csharp-practice\obj\Debug\net8.0\csharp-practice.AssemblyInfo.cs
+C:\Users\claud\Desktop\csharp-practice\obj\Debug\net8.0\csharp-practice.csproj.CoreCompileInputs.cache
