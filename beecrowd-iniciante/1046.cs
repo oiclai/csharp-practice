@@ -6,7 +6,7 @@ namespace URI
 	{
 		public static void Main(string[] args)
 		{
-		  string [] horas = Console.ReadLine().Split(" ");
+		  string [] horas = Console.ReadLine().Split(' ');
 		  int horaInicial = int.Parse(horas[0]);
 		  int horaFinal = int.Parse(horas[1]);
 		  int duracaoTotal = 1;
