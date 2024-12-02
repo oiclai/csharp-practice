@@ -4,7 +4,6 @@ namespace Course {
   class Aluno {
     public string Nome;
     public double Nota1, Nota2, Nota3;
-    public double Imposto;
 
     public double NotaFinal() {
       return Nota1 + Nota2 + Nota3;
