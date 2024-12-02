@@ -10,6 +10,13 @@ namespace Course {
     public double ValorTotalEmEstoque() {
       return Preco * Quantidade;
     }
+
+    public void AdicionarProdutos(int quantidade) {
+      Quantidade += quantidade;
+    }
+    public void RemoverProdutos(int quantidade) {
+      Quantidade -= quantidade;
+    }
     public override string ToString(){
       return Nome
         + ", $ "
@@ -32,6 +39,19 @@ namespace Course {
       p.Quantidade = int.Parse(Console.ReadLine());
 
       Console.WriteLine("Dados do Produto: " +p);
+
+      Console.WriteLine();
+      Console.Write('Digite o numero de profutos a serem adicionados: ');
+      int quantiaAdd = int.Parse(Console.ReadLine());
+      p.AdicionarProdutos(quantiaAdd);
+      Console.WriteLine();
+      Console.WriteLine("Dados atualizados: " +p);
+      Console.WriteLine();
+      Console.Write('Digite o numero de profutos a serem removidos: ');
+      int quantiaDel = int.Parse(Console.ReadLine());
+      p.RemoverProdutos(quantiaDel);
+      Console.WriteLine();
+      Console.WriteLine("Dados atualizados: " +p);
     }
   }
 }
