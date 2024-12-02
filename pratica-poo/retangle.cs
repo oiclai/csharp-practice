@@ -12,7 +12,7 @@ namespace Course {
     public double Perimetro() {
       return Largura+Altura+Largura+Altura;
     }
-    public void Diagonal() {
+    public double Diagonal() {
       return Math.Sqrt(Largura * Largura + Altura * Altura);
     }
   }
