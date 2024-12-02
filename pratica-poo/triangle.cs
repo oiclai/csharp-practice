@@ -5,6 +5,11 @@ namespace Course {
         public double A;
         public double B;
         public double C;
+
+        public double Area() { // metodo
+            double p = (A + B + C) / 2.0;
+            return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+        }
     }
     class Programa {
         static void Main(string[] args) {
@@ -22,11 +27,8 @@ namespace Course {
             y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double p = (x.A + x.B + x.C) / 2.0;
-            double AreaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
-
-            p = (y.A + y.B + y.C) / 2.0;
-            double AreaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+            double areaX = x.Area();
+            double areaY = y.Area();
             
             Console.WriteLine("Area de X = " + AreaX.ToString("F4", CultureInfo.InvariantCulture)); 
             Console.WriteLine("Area de Y = " + AreaY.ToString("F4", CultureInfo.InvariantCulture));
