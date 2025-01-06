@@ -7,20 +7,25 @@ OPÇÃO 1 DE IMPLEMNENTAR O ENCAPSULAMENTO
 # GET : obter -> acessar o valor do atributo
 # SET : definir -> alterar o valor do atributo
 obs: n costuma ser usado no C#
+
+-----------------------------------------------------
+> propriedades autoimplementadas
+
+public double Preco { get; private set; }
 */
 
 
 namespace Course {
     class Produto {
         private string _nome;
-        private string _preco;
+        public double Preco { get; private set; }
         private string _quantidade;
 
         public Produto(){
         }
         public Produto(string nome, string preco, string quantidade){
             _nome = nome;
-            _preco = preco;
+            Preco = preco;
             _quantidade = quantidade;
         }
         // -------------------------------------------------
@@ -31,15 +36,22 @@ namespace Course {
             if (nome != null && nome.Length > 1)
                 _nome = nome;
         }
+        public string Nome {
+            get { return _nome; }
+            set { 
+                if value != null && value.Length > 1)
+                    _nome = value;
+                }
+        }
         public void SetPreco(string preco){
-            _preco = preco;
+            Preco = preco;
         }
         public string GetPreco() {
             return _preco;
         }
         // -------------------------------------------------
         public double ValorTotalEmEstoque() {
-            return _preco * _quantidade;
+            return Preco * _quantidade;
         }
         public void AdicionarProdutos(int quantidade) {
             _quantidade += quantidade;
@@ -62,7 +74,7 @@ namespace Course {
         public static void Main(string[] args) {
             Produto p = new Produto("TV", "500.00", "10");
             p.SetNome("TV 4K");
-            Console.WriteLine(p.GetNome());
+            Console.WriteLine(p.Nome());
             Console.WriteLine(p.SetPreco());
         }
     }
