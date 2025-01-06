@@ -52,6 +52,17 @@ namespace Course {
             Produto p = new Produto(nome, preco, 20);
             Produto p2 = new Produto(nome, preco);
             Produto p3 = new Produto();
+
+        /*
+        FORMA DE INSTANCIAR DIFERENTE -> ela ate aceita o metodo sem parametro
+            Produto p4 = new Produto {
+                Nome = "TV",
+                Preco = 900.00,
+                Quantidade = 10
+            };
+        */
+            Console.WriteLine();
+
             Console.WriteLine();
             Console.Write("Dados do produto: " + p);
 
