@@ -19,7 +19,7 @@ namespace Course {
     class Produto {
         private string _nome;
         public double Preco { get; private set; }
-        private string _quantidade;
+        public string Quantidade { get; private set; };
 
         public Produto(){
         }
